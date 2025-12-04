@@ -58,7 +58,7 @@ Key features include:
 
 - **Traffic_Vol**: Daily aggregated traffic volume (NYC ATR counts).
 - **Wind_Speed, Precipitation, Pressure, Temp_Avg**: Raw weather variables.
-- **Traffic_Index**: `Traffic_Vol / (Wind_Speed + 0.1)` – approximates high‑traffic / low‑dispersion conditions.
+- **Traffic_Index**: `Traffic_Vol / (Wind_Speed + 0.1)`: approximates when low ventilation (little wind) with high traffic which traps air pollutant.
 - **Temp_Change**: `Temp_Avg_today − Temp_Avg_yesterday`.
 - **AQI, AQI_Lag_1, AQI_Roll_3**: Today’s AQI, yesterday’s AQI, and 3‑day rolling AQI.
 - **Target_NextDay_AQI**: Tomorrow’s AQI (prediction target).
@@ -88,7 +88,7 @@ Days with **AQI > 150** are treated as extreme outliers and removed for the main
 A key limitation was the spatial mismatch between data sources. I aggregated traffic for the entire city but compared it to specific AQI sensors. A traffic jam in Queens may not affect a sensor in Manhattan. 
  - Future Work: This should be improved by using Geospatial Matching, pairing specific traffic counters with the nearest air quality monitor.
 
-The model relies solely on ground-level sensors. It fails to account for pollution like smoke drifting in from other states. 
+The model relies solely on ground-level sensors. It fails to account for pollution like smoke from other states. 
  - Future Work: Incorporate other data to differentiate between locally generated pollution and regional transport.
 
 NYC is a dense, transit-heavy island with unique weather. The findings that 'traffic is negligible' may not hold for car-centric cities like Los Angeles, however, due to the obstacle in finding other valid city data, this project sticks with NYC only.
