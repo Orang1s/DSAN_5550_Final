@@ -85,8 +85,8 @@ Days with **AQI > 150** are treated as extreme outliers and removed for the main
 3. **Model Performance:** While the low $R^2$ indicates difficulty in predicting the exact magnitude, but the model achieved a relatively good **Directional Accuracy**. It successfully captures the trend of air quality, making it a viable tool for directional early warning systems.
 
 ### Limitations & Future Work
-A key limitation was the spatial mismatch between data sources. I aggregated traffic for the entire city but compared it to specific AQI sensors. A traffic jam in Queens may not affect a sensor in Manhattan. 
- - Future Work: This should be improved by using Geospatial Matching, pairing specific traffic counters with the nearest air quality monitor.
+A key limitation was the data source itself. I aggregated traffic for the entire city but compared it to specific AQI sensors. A traffic jam in Queens may not affect a sensor in Manhattan. 
+ - Future Work: This should be improved by using Geospatial Matching, using specific traffic counters with the nearest air quality monitor.
 
 The model relies solely on ground-level sensors. It fails to account for pollution like smoke from other states. 
  - Future Work: Incorporate other data to differentiate between locally generated pollution and regional transport.
